@@ -1,6 +1,6 @@
 import cookieParser from 'cookie-parser';
 import express from 'express';
-import { PORT } from './src/common/constants/app.constant.js';
+import { PORT } from './src/common/constants/app.constants.js';
 import { appError } from './src/common/helpers/app-error.helper.js';
 import rootRouter from './src/router/root.router.js';
 
