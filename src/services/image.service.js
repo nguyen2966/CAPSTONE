@@ -9,7 +9,8 @@ export const imageService = {
         where:{
           ten_hinh:{
             contains: searchName
-          }
+          },
+          isDeleted: false
         }
       }) : await prisma.hinh_anh.findMany();
 
@@ -21,7 +22,8 @@ export const imageService = {
 
     const image = await prisma.hinh_anh.findUnique({
       where:{
-        hinh_id: +id
+        hinh_id: +id,
+        isDeleted: false
       },
       include:{
         nguoi_dung:true
@@ -41,7 +43,8 @@ export const imageService = {
 
       const image = await prisma.hinh_anh.findUnique({
         where:{
-          hinh_id: +id
+          hinh_id: +id,
+          isDeleted:false
         }
       });
 
@@ -64,7 +67,8 @@ export const imageService = {
 
       const image = await prisma.hinh_anh.findUnique({
         where:{
-          hinh_id: +id
+          hinh_id: +id,
+          isDeleted:false
         }
       });
 

@@ -1,0 +1,1119 @@
+{
+  "info": {
+    "_postman_id": "eb5ac7cd-361b-418e-8b6f-0e730c89999c",
+    "name": "CAPSTONE",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "46428106",
+    "_collection_link": "https://go.postman.co/collection/46428106-eb5ac7cd-361b-418e-8b6f-0e730c89999c?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"nguyentoankhoa12@gmail.com\",\r\n    \"ho_ten\" : \"Nguyễn Lê Nguyên\",\r\n    \"mat_khau\": \"nguyenle29\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{domain}}/auth/register",
+          "host": [
+            "{{domain}}"
+          ],
+          "path": [
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"nguyentoankhoa12@gmail.com\",\r\n    \"mat_khau\": \"nguyenle29\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{domain}}/auth/login",
+          "host": [
+            "{{domain}}"
+          ],
+          "path": [
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Login",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"nguyentoankhoa12@gmail.com\",\r\n    \"mat_khau\": \"nguyenle29\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{domain}}/auth/login",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Set-Cookie",
+              "value": "accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjoxLCJpYXQiOjE3Nzc4NjUzODIsImV4cCI6MTc3Nzg2NTk4Mn0.2yS5O55Pj5y7yKrqHoajRO-h4CvlJChdv3wgXapr86U; Path=/"
+            },
+            {
+              "key": "Set-Cookie",
+              "value": "refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjoxLCJpYXQiOjE3Nzc4NjUzODIsImV4cCI6MTc3Nzk1MTc4Mn0.R6xB78jUu36Steupk1hs7_0EL21PuZdNmvTiwHKRs3I; Path=/"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "100"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"64-Iy8K3P1U+5Uh7jzIfR8RbbWqZw0\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 04 May 2026 03:29:42 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": \"success\",\n    \"statusCode\": 200,\n    \"message\": \"Login thành công\",\n    \"data\": true,\n    \"doc\": \"swagger.com\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get user info",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{domain}}/auth/get-info",
+          "host": [
+            "{{domain}}"
+          ],
+          "path": [
+            "auth",
+            "get-info"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get user info",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{domain}}/auth/get-info",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "auth",
+                "get-info"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "363"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"16b-GHRilflXwMFJVYjOg//Ov4Met5k\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 04 May 2026 03:29:59 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": \"success\",\n    \"statusCode\": 200,\n    \"message\": \"Lấy info người dùng thành công\",\n    \"data\": {\n        \"nguoi_dung_id\": 1,\n        \"email\": \"nguyentoankhoa12@gmail.com\",\n        \"ho_ten\": \"Nguyễn Lê Nguyên\",\n        \"anh_dai_dien\": null,\n        \"tuoi\": null,\n        \"deletedBy\": 0,\n        \"isDeleted\": false,\n        \"deletedAt\": null,\n        \"createdAt\": \"2026-05-03T14:58:46.000Z\",\n        \"updatedAt\": \"2026-05-03T14:58:46.000Z\"\n    },\n    \"doc\": \"swagger.com\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "User create image",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "image",
+              "type": "file",
+              "uuid": "454963d7-43c7-4263-a0de-cc286c2fda9b",
+              "src": "/C:/Users/ACER/Downloads/kungfu.jpg"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{domain}}/user/images",
+          "host": [
+            "{{domain}}"
+          ],
+          "path": [
+            "user",
+            "images"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "User create image",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "image",
+                  "type": "file",
+                  "uuid": "454963d7-43c7-4263-a0de-cc286c2fda9b",
+                  "src": "/C:/Users/ACER/Downloads/kungfu.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{domain}}/user/images",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "user",
+                "images"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "198"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"c6-Sz2Emr1srw7T8tMiwN4lwsukenY\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 04 May 2026 03:33:07 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": \"success\",\n    \"statusCode\": 200,\n    \"message\": \"Tạo ảnh thành công\",\n    \"data\": \"https://res.cloudinary.com/dphfbhmyo/image/upload/v1777865586/node_54/hyg2hczlscyfhm4xrpf0.jpg\",\n    \"doc\": \"swagger.com\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "All images of user",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "image",
+              "type": "file",
+              "uuid": "454963d7-43c7-4263-a0de-cc286c2fda9b",
+              "src": "/C:/Users/ACER/Downloads/kungfu.jpg"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{domain}}/user/images",
+          "host": [
+            "{{domain}}"
+          ],
+          "path": [
+            "user",
+            "images"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "All images of user",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "image",
+                  "type": "file",
+                  "uuid": "454963d7-43c7-4263-a0de-cc286c2fda9b",
+                  "src": "/C:/Users/ACER/Downloads/kungfu.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{domain}}/user/images",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "user",
+                "images"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "661"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"295-WJryOGURVQKo1004I1Ze5VvZZA4\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 04 May 2026 03:37:43 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": \"success\",\n    \"statusCode\": 200,\n    \"message\": \"Lấy danh sách ảnh đã tạo thành công\",\n    \"data\": [\n        {\n            \"hinh_id\": 1,\n            \"nguoi_dung_id\": 1,\n            \"ten_hinh\": null,\n            \"duong_dan\": \"node_54/jkbzuz4f3jvqn7rkd7bk\",\n            \"mo_ta\": null,\n            \"deletedBy\": 0,\n            \"isDeleted\": false,\n            \"deletedAt\": null,\n            \"createdAt\": \"2026-05-04T03:30:30.000Z\",\n            \"updatedAt\": \"2026-05-04T03:30:30.000Z\"\n        },\n        {\n            \"hinh_id\": 2,\n            \"nguoi_dung_id\": 1,\n            \"ten_hinh\": \"kungfu.jpg\",\n            \"duong_dan\": \"https://res.cloudinary.com/dphfbhmyo/image/upload/v1777865586/node_54/hyg2hczlscyfhm4xrpf0.jpg\",\n            \"mo_ta\": null,\n            \"deletedBy\": 0,\n            \"isDeleted\": false,\n            \"deletedAt\": null,\n            \"createdAt\": \"2026-05-04T03:33:07.000Z\",\n            \"updatedAt\": \"2026-05-04T03:33:07.000Z\"\n        }\n    ],\n    \"doc\": \"swagger.com\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "All images saved by user",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{domain}}/user/images-saved",
+          "host": [
+            "{{domain}}"
+          ],
+          "path": [
+            "user",
+            "images-saved"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "All images saved by user",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{domain}}/user/images-saved",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "user",
+                "images-saved"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "382"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"17e-1kgG2eM4sU0GofLiANQyzZLHBOw\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 04 May 2026 06:58:20 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": \"success\",\n    \"statusCode\": 200,\n    \"message\": \"Lấy danh sách ảnh đã lưu thành công\",\n    \"data\": [\n        {\n            \"hinh_id\": 1,\n            \"nguoi_dung_id\": 1,\n            \"ten_hinh\": \"kafu.jpg\",\n            \"duong_dan\": \"node_54/jkbzuz4f3jvqn7rkd7bk\",\n            \"mo_ta\": null,\n            \"deletedBy\": 0,\n            \"isDeleted\": true,\n            \"deletedAt\": \"2026-05-04T04:01:32.000Z\",\n            \"createdAt\": \"2026-05-04T03:30:30.000Z\",\n            \"updatedAt\": \"2026-05-04T06:34:31.000Z\"\n        }\n    ],\n    \"doc\": \"swagger.com\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Update user info",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "ho_ten",
+              "value": "Nguyễn Lê Nguyên 29",
+              "type": "text",
+              "uuid": "83b0adbd-3307-4898-9f4d-3fe58ccc2dc2"
+            },
+            {
+              "key": "tuoi",
+              "value": "21",
+              "type": "text",
+              "uuid": "3f0f5ee9-7eda-4f83-a459-8b1e990017ed"
+            },
+            {
+              "key": "avatar",
+              "type": "file",
+              "uuid": "91b5c38d-f084-4a7f-83b4-b0a4f485b999",
+              "src": "/C:/Users/ACER/Downloads/download.jpg"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{domain}}/user/info",
+          "host": [
+            "{{domain}}"
+          ],
+          "path": [
+            "user",
+            "info"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Update user info",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "ho_ten",
+                  "value": "Nguyễn Lê Nguyên 29",
+                  "type": "text",
+                  "uuid": "83b0adbd-3307-4898-9f4d-3fe58ccc2dc2"
+                },
+                {
+                  "key": "tuoi",
+                  "value": "21",
+                  "type": "text",
+                  "uuid": "3f0f5ee9-7eda-4f83-a459-8b1e990017ed"
+                },
+                {
+                  "key": "avatar",
+                  "type": "file",
+                  "uuid": "91b5c38d-f084-4a7f-83b4-b0a4f485b999",
+                  "src": "/C:/Users/ACER/Downloads/download.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{domain}}/user/info",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "user",
+                "info"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "133"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"85-Mt26qDvOf1/YtqM+HQMhyKcHOaY\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 04 May 2026 03:52:19 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": \"success\",\n    \"statusCode\": 200,\n    \"message\": \"Cập nhật thông tin người dùng thành công\",\n    \"data\": true,\n    \"doc\": \"swagger.com\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "User delete image",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{domain}}/user/images/1",
+          "host": [
+            "{{domain}}"
+          ],
+          "path": [
+            "user",
+            "images",
+            "1"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "User delete image",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{domain}}/user/images/1",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "user",
+                "images",
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "105"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"69-2dM6vT52L1CzgovtDulPcQ1Mnew\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 04 May 2026 04:01:32 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": \"success\",\n    \"statusCode\": 200,\n    \"message\": \"Xóa ảnh thành công\",\n    \"data\": true,\n    \"doc\": \"swagger.com\"\n}"
+        },
+        {
+          "name": "User delete image",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{domain}}/user/images/1",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "user",
+                "images",
+                "1"
+              ]
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "467"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1d3-HmGS2hVelUyDwRjYCwZbzGGkJio\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 04 May 2026 04:02:12 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": \"error\",\n    \"statusCode\": 400,\n    \"message\": \"Ảnh này đã được xóa\",\n    \"stack\": \"BadRequestException: Ảnh này đã được xóa\\n    at Object.removeImage (file:///E:/Webs_252/Cybersoft_Node54/capstone/src/services/user.service.js:95:13)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\\n    at async removeImage (file:///E:/Webs_252/Cybersoft_Node54/capstone/src/controllers/user.controller.js:30:22)\",\n    \"doc\": \"swagger.com\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get list of images",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{domain}}/image",
+          "host": [
+            "{{domain}}"
+          ],
+          "path": [
+            "image"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get list of images",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{domain}}/image?searchName=kungfu",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "image"
+              ],
+              "query": [
+                {
+                  "key": "searchName",
+                  "value": "kungfu",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "419"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1a3-WHoKS5Ds+e2WdfsqZZ60abk8jf4\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 04 May 2026 06:52:26 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": \"success\",\n    \"statusCode\": 200,\n    \"message\": \"Lấy danh sách ảnh thành công\",\n    \"data\": [\n        {\n            \"hinh_id\": 2,\n            \"nguoi_dung_id\": 1,\n            \"ten_hinh\": \"kungfu.jpg\",\n            \"duong_dan\": \"https://res.cloudinary.com/dphfbhmyo/image/upload/v1777865586/node_54/hyg2hczlscyfhm4xrpf0.jpg\",\n            \"mo_ta\": null,\n            \"deletedBy\": 0,\n            \"isDeleted\": false,\n            \"deletedAt\": null,\n            \"createdAt\": \"2026-05-04T03:33:07.000Z\",\n            \"updatedAt\": \"2026-05-04T03:33:07.000Z\"\n        }\n    ],\n    \"doc\": \"swagger.com\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Check image saved by user",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "Check image saved by user",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{domain}}/image/is-saved/1",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "image",
+                "is-saved",
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "125"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"7d-Dbcg6kduFsJc5jsjI79GUBXHXdA\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 04 May 2026 06:51:46 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": \"success\",\n    \"statusCode\": 200,\n    \"message\": \"Kiểm tra lưu ảnh\",\n    \"data\": \"Ảnh đã được lưu\",\n    \"doc\": \"swagger.com\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Save image by user",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "Save image by user",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{domain}}/image/1",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "image",
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "93"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"5d-uY0Ti0JR4i6FXCjczJPVoKlKbMc\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 04 May 2026 06:51:43 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": \"success\",\n    \"statusCode\": 200,\n    \"message\": \"Lưu ảnh thành công\",\n    \"doc\": \"swagger.com\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get image details",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "Get image details",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{domain}}/image/1",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "image",
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "725"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"2d5-hV8sm1dc4RshV02qkWEqTf2419o\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 04 May 2026 07:07:22 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": \"success\",\n    \"statusCode\": 200,\n    \"message\": \"Lấy chi tiết ảnh thành công\",\n    \"data\": {\n        \"hinh_id\": 1,\n        \"nguoi_dung_id\": 1,\n        \"ten_hinh\": \"kafu.jpg\",\n        \"duong_dan\": \"node_54/jkbzuz4f3jvqn7rkd7bk\",\n        \"mo_ta\": null,\n        \"deletedBy\": 0,\n        \"isDeleted\": false,\n        \"deletedAt\": \"2026-05-04T04:01:32.000Z\",\n        \"createdAt\": \"2026-05-04T03:30:30.000Z\",\n        \"updatedAt\": \"2026-05-04T07:07:17.000Z\",\n        \"nguoi_dung\": {\n            \"nguoi_dung_id\": 1,\n            \"email\": \"nguyentoankhoa12@gmail.com\",\n            \"ho_ten\": \"Nguyễn Lê Nguyên 29\",\n            \"anh_dai_dien\": \"https://res.cloudinary.com/dphfbhmyo/image/upload/v1777866738/node_54/yvhsaqkmeflsnnn6fkfc.jpg\",\n            \"tuoi\": 21,\n            \"deletedBy\": 0,\n            \"isDeleted\": false,\n            \"deletedAt\": null,\n            \"createdAt\": \"2026-05-03T14:58:46.000Z\",\n            \"updatedAt\": \"2026-05-04T03:52:18.000Z\"\n        }\n    },\n    \"doc\": \"swagger.com\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Create comment on image",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"content\": \"Ảnh này đẹp quá\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{domain}}/comments/1",
+          "host": [
+            "{{domain}}"
+          ],
+          "path": [
+            "comments",
+            "1"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Create comment on image",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"content\": \"Ảnh này đẹp quá\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{domain}}/comments/1",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "comments",
+                "1"
+              ]
+            }
+          },
+          "status": "Forbidden",
+          "code": 403,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "500"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1f4-zcKrfUYYnu5kM3N0HQNnmCErL9s\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 04 May 2026 07:23:40 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": \"error\",\n    \"statusCode\": 403,\n    \"message\": \"Bạn đã bình luận ảnh này rồi\",\n    \"stack\": \"ForbiddenException: Bạn đã bình luận ảnh này rồi\\n    at Object.createComment (file:///E:/Webs_252/Cybersoft_Node54/capstone/src/services/comments.service.js:31:25)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\\n    at async createComment (file:///E:/Webs_252/Cybersoft_Node54/capstone/src/controllers/comments.controller.js:12:22)\",\n    \"doc\": \"swagger.com\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get all comments of an image",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "Get all comments of an image",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{domain}}/comments/1",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "comments",
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "291"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"123-zWviUEc0VKtYAMJO4w/730IcA1U\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 04 May 2026 07:24:26 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": \"success\",\n    \"statusCode\": 200,\n    \"message\": \"Lấy các bình luận của ảnh thành công\",\n    \"data\": [\n        {\n            \"binh_luan_id\": 1,\n            \"nguoi_dung_id\": 1,\n            \"hinh_id\": 1,\n            \"ngay_binh_luan\": \"2026-05-04T07:23:12.000Z\",\n            \"noi_dung\": \"Ảnh này đẹp quá\",\n            \"isDeleted\": false,\n            \"deletedAt\": null\n        }\n    ],\n    \"doc\": \"swagger.com\"\n}"
+        }
+      ]
+    }
+  ]
+}
