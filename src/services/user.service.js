@@ -36,13 +36,25 @@ export const userService = {
   async findAllImagesSaved(req) {
     const nguoi_dung_id = req.user.nguoi_dung_id;
 
-    const imagesSaved = prisma.luu_anh.findMany({
+    const imagesSaved = await prisma.luu_anh.findMany({
       where: {
         nguoi_dung_id: +nguoi_dung_id
       }
     });
 
-    return imagesSaved;
+    if(!imagesSaved) return "Người dùng chưa lưu ảnh nào";
+
+    const imagesId = imagesSaved.map((image) => image.hinh_id);
+
+    const savedImages = await prisma.hinh_anh.findMany({
+      where:{
+        hinh_id:{
+          in: imagesId
+        }
+      }
+    });
+
+    return savedImages;
   },
 
   async updateInfo(req) {
